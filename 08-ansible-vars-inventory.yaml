@@ -1,0 +1,8 @@
+- name: variables from inventory
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: print msg
+      ansible.builtin.debug:
+        msg: "I am learning , {{ COURSE }}! and the duration is {{ DURATION }} and trainer is {{ TRAINER }}"
+         
