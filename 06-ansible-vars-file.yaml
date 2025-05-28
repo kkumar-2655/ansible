@@ -8,7 +8,7 @@
       msg:  "{{ COURSE }} is a course by {{ TRAINER }} and it lasts for {{ DURATION }}"
 
   tasks:
-  - name: print msg
+  - name: print msg with task level vars
     vars_files:
       - task-level-vars.yaml
     ansible.builtin.debug:
