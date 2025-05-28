@@ -1,0 +1,21 @@
+- name : Task level variables
+  hosts: localhost
+  vars:
+    DURATION: "10 HRS"
+    COURSE: "Ansible for DevOps"
+    TRAINER: "SIVA KUMAR"
+  tasks:
+  - name: print msg
+    ansible.builtin.debug:
+      msg:  "{{ COURSE }} is a course by {{ TRAINER }} and it lasts for {{ DURATION }}"
+    vars:
+      DURATION: "20 HRS"
+      COURSE: "Ansible for DevOps - Advanced"
+      TRAINER: "SIVA KUMAR - Advanced"
+  - name: print msg again
+    ansible.builtin.debug:
+      msg:  "{{ COURSE }} is a course by {{ TRAINER }} and it lasts for {{ DURATION }}"
+    vars:
+      DURATION: "30 HRS"
+      COURSE: "Ansible for DevOps - Expert"
+      TRAINER: "SIVA KUMAR - Expert"
