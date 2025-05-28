@@ -1,10 +1,14 @@
 - name: condition demo
   hosts: localhost
   vars:
-    number: 10
+    number: 9
   # This is a play level variable, it can be used in tasks and conditionals
   tasks:
   - name: print if number is even
     ansible.builtin.debug:
       msg: "The number {{ number }} is even"
     when: number % 2 == 0
+  - name: print if number is odd
+    ansible.builtin.debug:
+      msg: "The number {{ number }} is odd"
+    when: number % 2 != 0
