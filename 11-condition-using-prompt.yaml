@@ -1,6 +1,6 @@
 - name: condition using prompt
   hosts: localhost
-  vars-prompt:
+  vars_prompt:
     - name: number
       prompt: "Enter a number to check if it is even or odd"
       private: true
