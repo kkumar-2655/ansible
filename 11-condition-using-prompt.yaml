@@ -3,7 +3,7 @@
   vars_prompt:
     - name: number
       prompt: "Enter a number to check if it is even or odd"
-      private: true
+      private: false
   tasks:
   - name: print if number is even
     ansible.builtin.debug:

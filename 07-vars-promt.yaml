@@ -14,4 +14,3 @@
         msg: "Hello, {{ USERNAME }}! Your password is {{ PASSWORD }}"
 
   
-  
