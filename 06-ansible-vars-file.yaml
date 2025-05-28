@@ -2,6 +2,7 @@
   hosts: localhost
   vars_files:
     - course.yaml
+    - task-level-vars.yaml
   tasks:
   - name: print msg
     ansible.builtin.debug:
@@ -9,7 +10,5 @@
 
   tasks:
   - name: print msg with task level vars
-    vars_files:
-      - task-level-vars.yaml
     ansible.builtin.debug:
       msg:  "{{ COURSE }} is a course by {{ TRAINER }} and it lasts for {{ DURATION }}"      
