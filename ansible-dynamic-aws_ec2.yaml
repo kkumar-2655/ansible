@@ -5,7 +5,9 @@ filters:
   instance-state-name: running
   tag:Name: ansible-dynamic
 hostnames:
-  - public_ip_address
+  - ip-address
+compose:
+  ansible_host: private_ip_address  
 keyed_groups:
   - key: tags.Name
     prefix: tag
