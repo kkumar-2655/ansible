@@ -7,10 +7,10 @@ regions:
 filters:
   instance-state-name: running
 hostnames:
-  - tag: Name
+  tag: Name
 compose:
   ansible_host: public_ip_address
 keyed_groups:
   - key: tags.Name
-    prefix: 
+    prefix: tag
     separator: '-'
