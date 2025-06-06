@@ -1,6 +1,6 @@
 
 - name: Install Nginx on EC2 instances
-  hosts: ansible-dynamic-aws_ec2
+  hosts: ansible_dynamic
   become: yes
   gather_facts: no
   tasks:
