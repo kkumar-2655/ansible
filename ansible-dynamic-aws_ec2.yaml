@@ -7,7 +7,7 @@ filters:
 hostnames:
   - ip-address
 compose:
-  ansible_host: private_ip_address  
+  ansible_host: public_ip_address  
 keyed_groups:
   - key: tags.Name
     prefix: tag
